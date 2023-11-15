@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  touch-action: none;
+  font-size: 1.75rem;
+  line-height: 1.50;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  --light-grey: rgba(0.5, 0.5, 0.7, 0.2);
+  --tooltip: rgba(0.7, 0.7, 0.9, 0.3);
+}
+
+#gizmoCanvas {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  bottom: 1rem;
+  left: 0rem;
+  z-index: 200000;
+}
+
+.treeWithIpythonButton {
+  top: 6rem!important;
+}
+
+#treeContainer {
+  display: none;
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  top: 3.5rem;
+  left: 0.4rem;
+  background-color: var(--light-grey);
+  font-size: 1rem;
+  z-index: 100;
+  transition: all 300ms ease-in-out;
+}
+
+#pivotMarker {
+  color: #ffffff;
+  position: absolute;
+  width: .7rem;
+  height: .7rem;
+  border-radius: .45rem;
+  border: .1rem solid #ebebeb;
+  background: black;
+  visibility: hidden;
+  box-shadow: .15rem .15rem .3rem .075rem black;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.toolbarWithIpythonButton {
+  top: 3.25rem!important;
+}
+
+.bimToolbar {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: row;
+  top: 0.75rem;
+  left: 0.4rem;
+}
+
+.explorerToggle {
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+  font-size: 1.25rem;
+  user-select: none;
+  flex: 1 1 auto;
+  color: black;
+  background-color: #DADADA;
+  text-align: center;
+  vertical-align: middle;
+  border: .05rem solid #1d2453;
+  padding: .15rem .5rem;
+  border-radius: .15rem;
+  overflow: visible;
+  margin: 0 .25rem 0 0;
+  box-sizing: border-box;
+  align-items: flex-start;
+  pointer-events: all;
+  z-index: 100000;
+  transition: all 300ms ease-in-out;
+}
+
+.explorerToggle:hover {
+    cursor: pointer;
+}
+
+.tooltiptext {
+  display: inline;
+  font-family: 'Roboto', sans-serif;
+  text-transform: none;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+}
+
+.explorerToggle .tooltiptext {
+  visibility: hidden;
+  background-color: var(--tooltip);
+  color: white;
+  text-align: center;
+  border-radius: .15rem;
+  padding: .5rem;
+  position: absolute;
+  z-index: 101;
+  top: 130%;
+  left: 50%;
+  margin-left: -10%;
+}
+
+.explorerToggle:hover .tooltiptext {
+  visibility: visible;
+}
+
+.explorerToggle .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 10%;
+  margin-left: -.25rem;
+  border-width: .25rem;
+  border-style: solid;
+  border-color: transparent transparent rgba(0.7, 0.7, 0.9, 0.3) transparent;
+}

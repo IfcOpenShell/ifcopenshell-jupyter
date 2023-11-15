@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<canvas id="xeokitCanvas"></canvas>
+<canvas id="gizmoCanvas"></canvas>
+<div id="treeContainer" class="{tree_classes}"></div>
+<div id="pivotMarker"></div>
+<div class="{toolbar_classes}">
+    <i id="reloadIfc" class="explorerToggle fa-solid fa-rotate"
+       onclick="reloadIfc()">
+        <span class="tooltiptext">Reload IFC model</span>
+    </i>
+    <i id="treeToggle" class="explorerToggle fa-solid fa-list"
+       onclick="treeToggleClick()">
+        <span class="tooltiptext">Show project outline</span>
+    </i>
+    <i id="gizmoToggle" class="explorerToggle fa-solid fa-globe"
+       onclick="gizmoToggleClick()">
+        <span class="tooltiptext">Show axis</span>
+    </i>
+</div>
+<script src="/nbextensions/xeokit-viz.js" type="module"></script>
+<link rel="stylesheet" href="/nbextensions/xeokit-style.css">
