@@ -1,2 +1,2 @@
-# ifcopenshell-binder
-Binder to run IfcOpenShell with Jupyter
+# ifcopenshell-jupyter
+Jupyter Notebook related adaptations for IfcOpenShell
